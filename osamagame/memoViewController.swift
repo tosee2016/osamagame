@@ -46,8 +46,10 @@ class memoViewController: UIViewController {
         nameInputBox.text = ""
     }
     
-    // deleteボタンが押されたときの処理
-    @IBAction func tappedDeleteAllQuestionButton(_ sender: UIButton) {
+
+    
+    override func viewDidLoad() {
+        
         let ud = UserDefaults.standard
         
         // 保存されている値を削除
@@ -56,11 +58,8 @@ class memoViewController: UIViewController {
         // 空のarrayをset(for エラー回避)
         ud.setValue([], forKey: "names")
         
-        showAlert(message: "削除が完了しました!")
-    }
-    
-    override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
     
     
