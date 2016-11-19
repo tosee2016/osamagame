@@ -10,40 +10,40 @@ import UIKit
 
 class memoViewController: UIViewController {
 
-    @IBOutlet weak var questionInputBox: UITextField!
-    @IBOutlet weak var answerControl: UISegmentedControl!
-    
-    // backボタンが押されたときの処理
-    @IBAction func tappedBackButton(_ sender: UIButton) {
-        //self.dismiss(animated: true, completion: nil)
+    @IBOutlet weak var nameInputBox: UITextField!
+
+    @IBAction func tappedStartButton(_ sender: UIButton) {
     }
+    
+    // STARTボタンが押されたときの処理tappedStartButton
+
     
     // createボタンが押されたときの処理処理
     @IBAction func tappedCreateButton(_ sender: Any) {
         
         
-        // テキストボックスに入力された問題文をquestionText定数に格納
-        let questionText:String = questionInputBox.text!
+        // テキストボックスに入力された問題文をnameText定数に格納
+        let nameText:String = nameInputBox.text!
         
         // iphone端末内にデータを保存するために使用するuser defaultsをオブジェクト化(使えるようにする)
         let ud = UserDefaults.standard
         
-        // これまで格納されていた問題をquestions配列に格納し、
-        var questions: [[String: Any]] = ud.object(forKey: "questions") as! [[String : Any]]
+        // これまで格納されていた問題をnames配列に格納し、
+        var names: [[String: Any]] = ud.object(forKey: "names") as! [[String : Any]]
         
-        // 今、ユーザーに入力してもらった問題文をquestions配列に追加する
-        questions.append( [
-            "question": questionText,
+        // 今、ユーザーに入力してもらった問題文をnames配列に追加する
+        names.append( [
+            "name": nameText,
             "answer": true
             ])
         
-        // 最後に、新たに問題が追加されたquestions配列をuser defaultsを使ってiphone端末内に保存する
-        ud.setValue(questions, forKey: "questions")
+        // 最後に、新たに問題が追加されたnames配列をuser defaultsを使ってiphone端末内に保存する
+        ud.setValue(names, forKey: "names")
         
         // 保存完了のalert
         showAlert(message: "保存が完了しました!")
         // textboxを空にする
-        questionInputBox.text = ""
+        nameInputBox.text = ""
     }
     
     // deleteボタンが押されたときの処理
@@ -51,10 +51,10 @@ class memoViewController: UIViewController {
         let ud = UserDefaults.standard
         
         // 保存されている値を削除
-        ud.removeObject(forKey: "questions")
+        ud.removeObject(forKey: "names")
         
         // 空のarrayをset(for エラー回避)
-        ud.setValue([], forKey: "questions")
+        ud.setValue([], forKey: "names")
         
         showAlert(message: "削除が完了しました!")
     }

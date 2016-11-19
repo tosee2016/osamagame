@@ -10,11 +10,10 @@ import UIKit
 
 class memo1ViewController: UIViewController {
     
-    @IBOutlet weak var questionLabel: UILabel!
-    @IBOutlet weak var questionNumLabel: UILabel!
+
+    @IBOutlet weak var firstPeople: UILabel!
     @IBOutlet weak var secondPeople: UILabel!
-    @IBOutlet weak var yesNum: UILabel!
-    @IBOutlet weak var answerLabel: UILabel!
+
     
     @IBOutlet weak var Xgame: UILabel!
     // 表示中の問題番号を格納するための変数
@@ -29,10 +28,12 @@ class memo1ViewController: UIViewController {
     
     
     // まるボタンを押したときに呼ばれる関数
-    @IBAction func tappedYesButton(_ sender: UIButton) {
+    @IBAction func tappedNextButton(_ sender: UIButton) {
+
         // 問題の正誤を判定 (関数の引数としてtrueをわたす)
         checkAnswer(yourAnswer: true)
     }
+
     
     // ロードされたときに呼び出される関数
     override func viewDidLoad() {
@@ -41,9 +42,9 @@ class memo1ViewController: UIViewController {
         
         let ud = UserDefaults.standard
         
-        // iPhone端末内にquestionsというkeyで何も保存されていなかったら、空のarrayを保存する(エラー回避)
-        if (ud.object(forKey: "questions") == nil) {
-            ud.setValue([], forKey: "questions")
+        // iPhone端末内にnamesというkeyで何も保存されていなかったら、空のarrayを保存する(エラー回避)
+        if (ud.object(forKey: "names") == nil) {
+            ud.setValue([], forKey: "names")
         }
         
         // ランダムで配列の要素を取得する
@@ -61,48 +62,49 @@ class memo1ViewController: UIViewController {
     // 問題を表示するための関数
     func showQuestion() {
         
-        // UserDefaultsを使って、iPhone端末内に保存されている問題を取り出し、questions定数に格納
+        // UserDefaultsを使って、iPhone端末内に保存されている問題を取り出し、names定数に格納
         let ud = UserDefaults.standard
-        let questions:[[String: Any]] = ud.object(forKey: "questions") as! [[String: Any]]
+        let names:[[String: Any]] = ud.object(forKey: "names") as! [[String: Any]]
+        
+        
         // 二人目
-        if (questions.count > currentQuestionNum) {
+        if (names.count > currentQuestionNum) {
             // question定数に現在の名前を格納
-            let question = questions[currentQuestionNum]
+            let name = names[currentQuestionNum]
             
             // question定数に格納されている名前がStringかどうかチェックする
-            if let que = question["question"] as? String {
+            if let que = name["name"] as? String {
                 // 二人目の表示
                 secondPeople.text = que
             }
         }
 
         // 一人目
-        if (questions.count > currentQuestionNum) {
+        if (names.count > currentQuestionNum) {
             // question定数に現在の名前を格納
-            let question = questions[currentQuestionNum]
+            let name = names[currentQuestionNum]
             
             // question定数に格納されている問題がStringかどうかチェックする
-            if let que = question["question"] as? String {
+            if let que = name["name"] as? String {
                 // 問題文の表示
-                questionLabel.text = que
+                firstPeople.text = que
             }
         } else {
             // 問題がなかった場合の処理
-            questionLabel.text = "No Question. Let's Create it!"
-            questionNumLabel.text = "問題No: 0"
+            firstPeople.text = "No Question. Let's Create it!"
         }
     }
     
     // 問題の正誤をチェックするための関数
     func checkAnswer(yourAnswer: Bool) {
         
-        // UserDefaultsを使って、iPhone端末内に保存されている問題を取り出し、questions定数に格納
+        // UserDefaultsを使って、iPhone端末内に保存されている問題を取り出し、names定数に格納
         let ud = UserDefaults.standard
-        let questions: [[String: Any]] = ud.object(forKey: "questions") as! [[String : Any]]
+        let names: [[String: Any]] = ud.object(forKey: "names") as! [[String : Any]]
         
-        if (questions.count > currentQuestionNum) {
+        if (names.count > currentQuestionNum) {
             // question変数に現在の問題を格納
-            let question = questions[currentQuestionNum]
+            let question = names[currentQuestionNum]
             
             // question変数に格納されている解答がBoolean型(論理型, true or false)かどうかチェックする
             if let ans = question["answer"] as? Bool {
@@ -115,19 +117,17 @@ class memo1ViewController: UIViewController {
                     currentYesNum += 1
                     // アラートの表示
                     showAlert(message: "正解!")
-                    answerLabel.text = "正解!"
                 }
                 else {
                     // 不正解
                     // アラートの表示
                     showAlert(message: "不正解...")
-                    answerLabel.text = "不正解..."
                 }
             }
         }
         
         // currentQuestionNumの値が問題数以上だったら最初の問題に戻す
-        if currentQuestionNum >= questions.count {
+        if currentQuestionNum >= names.count {
             currentQuestionNum = 0
         }
         
