@@ -22,6 +22,18 @@ class memo1ViewController: UIViewController {
     // 正解数を格納するための変数
     var currentYesNum: Int = 0
     
+    
+    let resultTextarrey: [String] = [
+        "大吉",
+        "大凶",
+        "小吉",
+        "吉",
+        "末吉",
+        "凶",
+        "中吉"
+    ]
+    
+    
     // ばつボタンを押したときに呼ばれる関数
     @IBAction func tappedNoButton(_ sender: UIButton) {
         // 問題の正誤を判定 (関数の引数としてfalseをわたす)
@@ -45,6 +57,12 @@ class memo1ViewController: UIViewController {
         if (ud.object(forKey: "questions") == nil) {
             ud.setValue([], forKey: "questions")
         }
+        
+        // ランダムで配列の要素を取得する
+        let resultNum = Int( arc4random_uniform(UInt32(resultTextarrey.count)) )
+        Xgame.text = resultTextarrey[resultNum]
+        
+        
         
         // 問題を表示
         showQuestion()
