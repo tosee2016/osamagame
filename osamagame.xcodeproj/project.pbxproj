@@ -13,6 +13,8 @@
 		A592F07B1DDFDF0B0087AC01 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A592F07A1DDFDF0B0087AC01 /* Assets.xcassets */; };
 		A592F07E1DDFDF0B0087AC01 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A592F07C1DDFDF0B0087AC01 /* LaunchScreen.storyboard */; };
 		A592F0891DDFDF0B0087AC01 /* osamagameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A592F0881DDFDF0B0087AC01 /* osamagameUITests.swift */; };
+		A592F0961DDFFBB80087AC01 /* memoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A592F0951DDFFBB80087AC01 /* memoViewController.swift */; };
+		A592F0981DE001750087AC01 /* memo1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A592F0971DE001750087AC01 /* memo1ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		A592F0841DDFDF0B0087AC01 /* osamagameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = osamagameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A592F0881DDFDF0B0087AC01 /* osamagameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = osamagameUITests.swift; sourceTree = "<group>"; };
 		A592F08A1DDFDF0B0087AC01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A592F0951DDFFBB80087AC01 /* memoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = memoViewController.swift; sourceTree = "<group>"; };
+		A592F0971DE001750087AC01 /* memo1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = memo1ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +84,8 @@
 				A592F0731DDFDF0B0087AC01 /* AppDelegate.swift */,
 				A592F0751DDFDF0B0087AC01 /* ViewController.swift */,
 				A592F0771DDFDF0B0087AC01 /* Main.storyboard */,
+				A592F0971DE001750087AC01 /* memo1ViewController.swift */,
+				A592F0951DDFFBB80087AC01 /* memoViewController.swift */,
 				A592F07A1DDFDF0B0087AC01 /* Assets.xcassets */,
 				A592F07C1DDFDF0B0087AC01 /* LaunchScreen.storyboard */,
 				A592F07F1DDFDF0B0087AC01 /* Info.plist */,
@@ -201,6 +207,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A592F0761DDFDF0B0087AC01 /* ViewController.swift in Sources */,
+				A592F0961DDFFBB80087AC01 /* memoViewController.swift in Sources */,
+				A592F0981DE001750087AC01 /* memo1ViewController.swift in Sources */,
 				A592F0741DDFDF0B0087AC01 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
