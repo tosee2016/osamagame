@@ -146,6 +146,7 @@
 				TargetAttributes = {
 					A592F06F1DDFDF0B0087AC01 = {
 						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 2W5KZ4543A;
 						ProvisioningStyle = Automatic;
 					};
 					A592F0831DDFDF0B0087AC01 = {
@@ -337,7 +338,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2W5KZ4543A;
 				INFOPLIST_FILE = osamagame/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nakamura.osamagame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -349,7 +352,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2W5KZ4543A;
 				INFOPLIST_FILE = osamagame/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nakamura.osamagame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -402,6 +407,7 @@
 				A592F08F1DDFDF0B0087AC01 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A592F0901DDFDF0B0087AC01 /* Build configuration list for PBXNativeTarget "osamagameUITests" */ = {
 			isa = XCConfigurationList;
@@ -410,6 +416,7 @@
 				A592F0921DDFDF0B0087AC01 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
