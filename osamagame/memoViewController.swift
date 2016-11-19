@@ -21,18 +21,6 @@ class memoViewController: UIViewController {
     // createボタンが押されたときの処理処理
     @IBAction func tappedCreateButton(_ sender: Any) {
         
-        // ユーザーが選んだまる・ばつを格納しておくための変数answer
-        var answer: Bool = true
-        
-        // その問題の解答(true or false)を判定
-        if answerControl.selectedSegmentIndex == 0 {
-            // choose false
-            answer = false
-        }
-        else {
-            // choose true
-            answer = true
-        }
         
         // テキストボックスに入力された問題文をquestionText定数に格納
         let questionText:String = questionInputBox.text!
@@ -46,7 +34,7 @@ class memoViewController: UIViewController {
         // 今、ユーザーに入力してもらった問題文をquestions配列に追加する
         questions.append( [
             "question": questionText,
-            "answer": answer
+            "answer": true
             ])
         
         // 最後に、新たに問題が追加されたquestions配列をuser defaultsを使ってiphone端末内に保存する

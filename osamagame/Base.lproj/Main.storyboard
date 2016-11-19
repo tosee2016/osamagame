@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -172,13 +171,6 @@
                                     <action selector="tappedCreateButton:" destination="d78-Ax-ivy" eventType="touchUpInside" id="6pz-AA-MeV"/>
                                 </connections>
                             </button>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="ydK-am-6QJ">
-                                <rect key="frame" x="20" y="388" width="93" height="29"/>
-                                <segments>
-                                    <segment title="False"/>
-                                    <segment title="True"/>
-                                </segments>
-                            </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Gc-Rx-Dqg">
                                 <rect key="frame" x="20" y="20" width="108" height="30"/>
                                 <state key="normal" title="ゲームスタート"/>
@@ -209,12 +201,9 @@
                             <constraint firstItem="Jvg-Hm-uRP" firstAttribute="centerX" secondItem="1sN-yN-h8A" secondAttribute="centerX" id="U3G-Ss-jUO"/>
                             <constraint firstItem="btR-bj-YlW" firstAttribute="top" secondItem="Jvg-Hm-uRP" secondAttribute="bottom" constant="40" id="kB8-wO-UhQ"/>
                             <constraint firstItem="Jvg-Hm-uRP" firstAttribute="centerY" secondItem="1sN-yN-h8A" secondAttribute="centerY" id="kDs-2K-5gA"/>
-                            <constraint firstItem="ydK-am-6QJ" firstAttribute="leading" secondItem="1sN-yN-h8A" secondAttribute="leading" constant="20" id="nuv-HA-6u2"/>
-                            <constraint firstItem="ydK-am-6QJ" firstAttribute="top" secondItem="Jvg-Hm-uRP" secondAttribute="bottom" constant="40" id="te8-65-8Cg"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="answerControl" destination="ydK-am-6QJ" id="jfv-fR-c0D"/>
                         <outlet property="questionInputBox" destination="Jvg-Hm-uRP" id="3da-cS-ROM"/>
                     </connections>
                 </viewController>
@@ -234,61 +223,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vmH-Ed-crJ">
-                                <rect key="frame" x="20" y="483.5" width="163.5" height="163.5"/>
-                                <color key="backgroundColor" red="0.4039215686" green="0.40000000000000002" blue="0.98431372549999996" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="vmH-Ed-crJ" secondAttribute="height" multiplier="1:1" id="s2H-tc-j51"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="100"/>
-                                <state key="normal" title="×">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="tappedNoButton:" destination="Pds-kd-1zb" eventType="touchUpInside" id="pTU-YZ-1z0"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aKw-Tu-yAw">
-                                <rect key="frame" x="191.5" y="483.5" width="163.5" height="163.5"/>
+                                <rect key="frame" x="154" y="515" width="201" height="132"/>
                                 <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="100"/>
-                                <state key="normal" title="○">
+                                <state key="normal" title="次へ">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="tappedYesButton:" destination="Pds-kd-1zb" eventType="touchUpInside" id="hHL-68-udg"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="正解数: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4aP-d6-SNq">
-                                <rect key="frame" x="20" y="61" width="72" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="問題No: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cj3-jX-dU2">
-                                <rect key="frame" x="20" y="30" width="76" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="一人目の人" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5lp-9b-9ot">
-                                <rect key="frame" x="20" y="143" width="335" height="100"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="一人目の人" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5lp-9b-9ot">
+                                <rect key="frame" x="16" y="67" width="335" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="oPO-la-THR"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="二人目の人" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HpU-05-CBM">
-                                <rect key="frame" x="20" y="262" width="335" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="解答表示" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VAI-A4-fbJ">
-                                <rect key="frame" x="20" y="92" width="70" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -300,43 +250,35 @@
                                 <state key="normal" title="Create Question"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QH6-qS-hDR">
-                                <rect key="frame" x="12" y="444" width="343" height="203"/>
+                                <rect key="frame" x="16" y="342" width="343" height="203"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="46"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="二人目の人" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HpU-05-CBM">
+                                <rect key="frame" x="16" y="146" width="335" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="aKw-Tu-yAw" secondAttribute="trailing" constant="20" id="1bA-X8-Fhw"/>
-                            <constraint firstItem="cj3-jX-dU2" firstAttribute="leading" secondItem="Hab-HP-y7m" secondAttribute="leading" constant="20" id="3wt-5w-luL"/>
-                            <constraint firstItem="4aP-d6-SNq" firstAttribute="top" secondItem="cj3-jX-dU2" secondAttribute="bottom" constant="10" id="AI8-6W-PhI"/>
-                            <constraint firstItem="cj3-jX-dU2" firstAttribute="top" secondItem="ijt-ff-AFw" secondAttribute="bottom" constant="10" id="J2D-qf-vzq"/>
                             <constraint firstItem="7Pb-Np-UYQ" firstAttribute="top" secondItem="aKw-Tu-yAw" secondAttribute="bottom" constant="20" id="KMa-Mi-LyX"/>
-                            <constraint firstItem="VAI-A4-fbJ" firstAttribute="leading" secondItem="Hab-HP-y7m" secondAttribute="leading" constant="20" id="Mmu-Oe-IR5"/>
-                            <constraint firstItem="4aP-d6-SNq" firstAttribute="leading" secondItem="Hab-HP-y7m" secondAttribute="leading" constant="20" id="WFO-La-UU4"/>
                             <constraint firstAttribute="trailing" secondItem="5lp-9b-9ot" secondAttribute="trailing" constant="20" id="XE7-ZL-cMj"/>
                             <constraint firstItem="w4b-ht-hmk" firstAttribute="top" secondItem="ijt-ff-AFw" secondAttribute="bottom" constant="5" id="Xap-6t-sxl"/>
-                            <constraint firstItem="aKw-Tu-yAw" firstAttribute="width" secondItem="vmH-Ed-crJ" secondAttribute="width" id="bpa-7O-0H1"/>
-                            <constraint firstItem="VAI-A4-fbJ" firstAttribute="top" secondItem="4aP-d6-SNq" secondAttribute="bottom" constant="10" id="c7x-dN-wNe"/>
-                            <constraint firstItem="aKw-Tu-yAw" firstAttribute="height" secondItem="vmH-Ed-crJ" secondAttribute="height" id="chn-3U-gFY"/>
-                            <constraint firstItem="7Pb-Np-UYQ" firstAttribute="top" secondItem="vmH-Ed-crJ" secondAttribute="bottom" constant="20" id="dT8-9v-UMF"/>
                             <constraint firstAttribute="trailing" secondItem="w4b-ht-hmk" secondAttribute="trailing" constant="20" id="efn-iN-Bwa"/>
                             <constraint firstItem="5lp-9b-9ot" firstAttribute="leading" secondItem="Hab-HP-y7m" secondAttribute="leading" constant="20" id="gR1-Ul-UW4"/>
-                            <constraint firstItem="aKw-Tu-yAw" firstAttribute="leading" secondItem="vmH-Ed-crJ" secondAttribute="trailing" constant="8" id="i3K-9s-9W8"/>
-                            <constraint firstItem="vmH-Ed-crJ" firstAttribute="leading" secondItem="Hab-HP-y7m" secondAttribute="leading" constant="20" id="wWQ-ze-DeZ"/>
-                            <constraint firstItem="5lp-9b-9ot" firstAttribute="top" secondItem="VAI-A4-fbJ" secondAttribute="bottom" constant="30" id="xdd-0l-dC5"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="Xgame" destination="QH6-qS-hDR" id="jIp-cZ-Ieu"/>
-                        <outlet property="answerLabel" destination="VAI-A4-fbJ" id="EZo-pg-evj"/>
                         <outlet property="questionLabel" destination="5lp-9b-9ot" id="Vh5-Wh-Jh5"/>
-                        <outlet property="questionNumLabel" destination="cj3-jX-dU2" id="sWq-Vh-fXb"/>
                         <outlet property="secondPeople" destination="HpU-05-CBM" id="fcG-f9-cUY"/>
-                        <outlet property="yesNum" destination="4aP-d6-SNq" id="if5-LB-ZNC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IbN-96-VnC" sceneMemberID="firstResponder"/>

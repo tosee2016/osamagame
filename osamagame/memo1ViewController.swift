@@ -22,23 +22,11 @@ class memo1ViewController: UIViewController {
     // 正解数を格納するための変数
     var currentYesNum: Int = 0
     
-    
     let resultTextarrey: [String] = [
-        "大吉",
-        "大凶",
-        "小吉",
-        "吉",
-        "末吉",
-        "凶",
-        "中吉"
+        "行動１",
+        "行動２"
     ]
     
-    
-    // ばつボタンを押したときに呼ばれる関数
-    @IBAction func tappedNoButton(_ sender: UIButton) {
-        // 問題の正誤を判定 (関数の引数としてfalseをわたす)
-        checkAnswer(yourAnswer: false)
-    }
     
     // まるボタンを押したときに呼ばれる関数
     @IBAction func tappedYesButton(_ sender: UIButton) {
@@ -62,10 +50,6 @@ class memo1ViewController: UIViewController {
         let resultNum = Int( arc4random_uniform(UInt32(resultTextarrey.count)) )
         Xgame.text = resultTextarrey[resultNum]
     
-    
-        
-        // 問題を表示
-        showQuestion()
     }
     
     // 画面が表示されたときに呼ばれす関数
@@ -101,10 +85,6 @@ class memo1ViewController: UIViewController {
             if let que = question["question"] as? String {
                 // 問題文の表示
                 questionLabel.text = que
-                // 問題番号の表示 (問題番号を格納しているInt型の変数(currentQuestionNum)をString型に変換)
-                questionNumLabel.text = "問題No: " + String(currentQuestionNum+1)
-                // 正解数の表示
-                yesNum.text = "正解数: " + String(currentYesNum)
             }
         } else {
             // 問題がなかった場合の処理
