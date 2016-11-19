@@ -61,8 +61,8 @@ class memo1ViewController: UIViewController {
         // ランダムで配列の要素を取得する
         let resultNum = Int( arc4random_uniform(UInt32(resultTextarrey.count)) )
         Xgame.text = resultTextarrey[resultNum]
-        
-        
+    
+    
         
         // 問題を表示
         showQuestion()
@@ -80,9 +80,21 @@ class memo1ViewController: UIViewController {
         // UserDefaultsを使って、iPhone端末内に保存されている問題を取り出し、questions定数に格納
         let ud = UserDefaults.standard
         let questions:[[String: Any]] = ud.object(forKey: "questions") as! [[String: Any]]
-        
+        // 二人目
         if (questions.count > currentQuestionNum) {
-            // question定数に現在の問題を格納
+            // question定数に現在の名前を格納
+            let question = questions[currentQuestionNum]
+            
+            // question定数に格納されている名前がStringかどうかチェックする
+            if let que = question["question"] as? String {
+                // 二人目の表示
+                secondPeople.text = que
+            }
+        }
+
+        // 一人目
+        if (questions.count > currentQuestionNum) {
+            // question定数に現在の名前を格納
             let question = questions[currentQuestionNum]
             
             // question定数に格納されている問題がStringかどうかチェックする
