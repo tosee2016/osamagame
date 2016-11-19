@@ -1,0 +1,417 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A592F0741DDFDF0B0087AC01 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A592F0731DDFDF0B0087AC01 /* AppDelegate.swift */; };
+		A592F0761DDFDF0B0087AC01 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A592F0751DDFDF0B0087AC01 /* ViewController.swift */; };
+		A592F0791DDFDF0B0087AC01 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A592F0771DDFDF0B0087AC01 /* Main.storyboard */; };
+		A592F07B1DDFDF0B0087AC01 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A592F07A1DDFDF0B0087AC01 /* Assets.xcassets */; };
+		A592F07E1DDFDF0B0087AC01 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A592F07C1DDFDF0B0087AC01 /* LaunchScreen.storyboard */; };
+		A592F0891DDFDF0B0087AC01 /* osamagameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A592F0881DDFDF0B0087AC01 /* osamagameUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A592F0851DDFDF0B0087AC01 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A592F0681DDFDF0B0087AC01 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A592F06F1DDFDF0B0087AC01;
+			remoteInfo = osamagame;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A592F0701DDFDF0B0087AC01 /* osamagame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = osamagame.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A592F0731DDFDF0B0087AC01 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A592F0751DDFDF0B0087AC01 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A592F0781DDFDF0B0087AC01 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A592F07A1DDFDF0B0087AC01 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A592F07D1DDFDF0B0087AC01 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A592F07F1DDFDF0B0087AC01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A592F0841DDFDF0B0087AC01 /* osamagameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = osamagameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A592F0881DDFDF0B0087AC01 /* osamagameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = osamagameUITests.swift; sourceTree = "<group>"; };
+		A592F08A1DDFDF0B0087AC01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A592F06D1DDFDF0B0087AC01 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A592F0811DDFDF0B0087AC01 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A592F0671DDFDF0B0087AC01 = {
+			isa = PBXGroup;
+			children = (
+				A592F0721DDFDF0B0087AC01 /* osamagame */,
+				A592F0871DDFDF0B0087AC01 /* osamagameUITests */,
+				A592F0711DDFDF0B0087AC01 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A592F0711DDFDF0B0087AC01 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A592F0701DDFDF0B0087AC01 /* osamagame.app */,
+				A592F0841DDFDF0B0087AC01 /* osamagameUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A592F0721DDFDF0B0087AC01 /* osamagame */ = {
+			isa = PBXGroup;
+			children = (
+				A592F0731DDFDF0B0087AC01 /* AppDelegate.swift */,
+				A592F0751DDFDF0B0087AC01 /* ViewController.swift */,
+				A592F0771DDFDF0B0087AC01 /* Main.storyboard */,
+				A592F07A1DDFDF0B0087AC01 /* Assets.xcassets */,
+				A592F07C1DDFDF0B0087AC01 /* LaunchScreen.storyboard */,
+				A592F07F1DDFDF0B0087AC01 /* Info.plist */,
+			);
+			path = osamagame;
+			sourceTree = "<group>";
+		};
+		A592F0871DDFDF0B0087AC01 /* osamagameUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A592F0881DDFDF0B0087AC01 /* osamagameUITests.swift */,
+				A592F08A1DDFDF0B0087AC01 /* Info.plist */,
+			);
+			path = osamagameUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A592F06F1DDFDF0B0087AC01 /* osamagame */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A592F08D1DDFDF0B0087AC01 /* Build configuration list for PBXNativeTarget "osamagame" */;
+			buildPhases = (
+				A592F06C1DDFDF0B0087AC01 /* Sources */,
+				A592F06D1DDFDF0B0087AC01 /* Frameworks */,
+				A592F06E1DDFDF0B0087AC01 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = osamagame;
+			productName = osamagame;
+			productReference = A592F0701DDFDF0B0087AC01 /* osamagame.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A592F0831DDFDF0B0087AC01 /* osamagameUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A592F0901DDFDF0B0087AC01 /* Build configuration list for PBXNativeTarget "osamagameUITests" */;
+			buildPhases = (
+				A592F0801DDFDF0B0087AC01 /* Sources */,
+				A592F0811DDFDF0B0087AC01 /* Frameworks */,
+				A592F0821DDFDF0B0087AC01 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A592F0861DDFDF0B0087AC01 /* PBXTargetDependency */,
+			);
+			name = osamagameUITests;
+			productName = osamagameUITests;
+			productReference = A592F0841DDFDF0B0087AC01 /* osamagameUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A592F0681DDFDF0B0087AC01 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = nakamura;
+				TargetAttributes = {
+					A592F06F1DDFDF0B0087AC01 = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+					};
+					A592F0831DDFDF0B0087AC01 = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = A592F06F1DDFDF0B0087AC01;
+					};
+				};
+			};
+			buildConfigurationList = A592F06B1DDFDF0B0087AC01 /* Build configuration list for PBXProject "osamagame" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A592F0671DDFDF0B0087AC01;
+			productRefGroup = A592F0711DDFDF0B0087AC01 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A592F06F1DDFDF0B0087AC01 /* osamagame */,
+				A592F0831DDFDF0B0087AC01 /* osamagameUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A592F06E1DDFDF0B0087AC01 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A592F07E1DDFDF0B0087AC01 /* LaunchScreen.storyboard in Resources */,
+				A592F07B1DDFDF0B0087AC01 /* Assets.xcassets in Resources */,
+				A592F0791DDFDF0B0087AC01 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A592F0821DDFDF0B0087AC01 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A592F06C1DDFDF0B0087AC01 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A592F0761DDFDF0B0087AC01 /* ViewController.swift in Sources */,
+				A592F0741DDFDF0B0087AC01 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A592F0801DDFDF0B0087AC01 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A592F0891DDFDF0B0087AC01 /* osamagameUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A592F0861DDFDF0B0087AC01 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A592F06F1DDFDF0B0087AC01 /* osamagame */;
+			targetProxy = A592F0851DDFDF0B0087AC01 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A592F0771DDFDF0B0087AC01 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A592F0781DDFDF0B0087AC01 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A592F07C1DDFDF0B0087AC01 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A592F07D1DDFDF0B0087AC01 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A592F08B1DDFDF0B0087AC01 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A592F08C1DDFDF0B0087AC01 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A592F08E1DDFDF0B0087AC01 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = osamagame/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nakamura.osamagame;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		A592F08F1DDFDF0B0087AC01 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = osamagame/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nakamura.osamagame;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		A592F0911DDFDF0B0087AC01 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = osamagameUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nakamura.osamagameUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = osamagame;
+			};
+			name = Debug;
+		};
+		A592F0921DDFDF0B0087AC01 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = osamagameUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nakamura.osamagameUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = osamagame;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A592F06B1DDFDF0B0087AC01 /* Build configuration list for PBXProject "osamagame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A592F08B1DDFDF0B0087AC01 /* Debug */,
+				A592F08C1DDFDF0B0087AC01 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A592F08D1DDFDF0B0087AC01 /* Build configuration list for PBXNativeTarget "osamagame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A592F08E1DDFDF0B0087AC01 /* Debug */,
+				A592F08F1DDFDF0B0087AC01 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A592F0901DDFDF0B0087AC01 /* Build configuration list for PBXNativeTarget "osamagameUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A592F0911DDFDF0B0087AC01 /* Debug */,
+				A592F0921DDFDF0B0087AC01 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A592F0681DDFDF0B0087AC01 /* Project object */;
+}
