@@ -10,12 +10,11 @@ import UIKit
 
 class memo1ViewController: UIViewController {
     
-    
     @IBOutlet weak var firstPeople: UILabel!
     @IBOutlet weak var secondPeople: UILabel!
     
-    
     @IBOutlet weak var Xgame: UILabel!
+    
     // 表示中の問題番号を格納するための変数
     var currentQuestionNum: Int = 0
     // 正解数を格納するための変数
@@ -24,12 +23,25 @@ class memo1ViewController: UIViewController {
     var resultNameNum1: Int = 0
     var resultNameNum2: Int = 0
     
-    
-    
+    var resultNum: Int = 0
     let resultTextarrey: [String] = [
         "行動１",
-        "行動２"
-    ]
+        "行動２",
+        "行動３",
+        "行動４",
+        "行動５",
+        "行動６",
+        "行動７",
+        "行動８",
+        "行動９",
+        "行動１０",
+        "行動１１",
+        "行動１２",
+        "行動１３",
+        "行動１４",
+        "行動１５",
+        "行動１６",
+        ]
     
     
     // まるボタンを押したときに呼ばれる関数
@@ -53,12 +65,13 @@ class memo1ViewController: UIViewController {
         }
         
         // ランダムで配列の要素を取得する
-        let resultNum = Int( arc4random_uniform(UInt32(resultTextarrey.count)) )
+        resultNum = Int( arc4random_uniform(UInt32(resultTextarrey.count)) )
+        
         Xgame.text = resultTextarrey[resultNum]
         
     }
     
-    // 画面が表示されたときに呼ばれす関数
+    // 画面が表示されたときに呼ばれる関数
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         showQuestion()
@@ -85,8 +98,6 @@ class memo1ViewController: UIViewController {
                 
                 resultNameNum1 = Int( arc4random_uniform(UInt32(names.count)) )
                 resultNameNum2 = Int( arc4random_uniform(UInt32(names.count)) )
-                
-                
             }
             
             let name1 = names[resultNameNum1]
@@ -97,6 +108,10 @@ class memo1ViewController: UIViewController {
             firstPeople.text = name1["name"] as? String
             secondPeople.text = name2["name"] as? String
             
+            // ランダムで配列の要素を取得する
+            resultNum = Int( arc4random_uniform(UInt32(resultTextarrey.count)) )
+            
+            Xgame.text = resultTextarrey[resultNum]
             
         } else {
             // 問題がなかった場合の処理

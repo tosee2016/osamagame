@@ -9,18 +9,18 @@
 import UIKit
 
 class memoViewController: UIViewController {
-
+    
+    var iCount: Int = 1
+    
     @IBOutlet weak var nameInputBox: UITextField!
-
+    
+    @IBOutlet weak var nameDescriptionLabel: UILabel!
+    
     @IBAction func tappedStartButton(_ sender: UIButton) {
     }
     
-    // STARTボタンが押されたときの処理tappedStartButton
-
-    
     // createボタンが押されたときの処理処理
     @IBAction func tappedCreateButton(_ sender: Any) {
-        
         
         // テキストボックスに入力された問題文をnameText定数に格納
         let nameText:String = nameInputBox.text!
@@ -42,11 +42,14 @@ class memoViewController: UIViewController {
         
         // 保存完了のalert
         showAlert(message: "保存が完了しました!")
-        // textboxを空にする
+        
+        iCount = iCount + 1
+        
+        nameDescriptionLabel.text = String(iCount) + "人目の名前を入力してください！！"
+        
         nameInputBox.text = ""
+        
     }
-    
-
     
     override func viewDidLoad() {
         
@@ -59,6 +62,8 @@ class memoViewController: UIViewController {
         ud.setValue([], forKey: "names")
         
         super.viewDidLoad()
+        
+        nameDescriptionLabel.text = String(iCount) + "人目の名前を入力してください！！"
         
     }
     
