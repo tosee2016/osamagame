@@ -15,7 +15,7 @@ class memoViewController: UIViewController {
     
     // backボタンが押されたときの処理
     @IBAction func tappedBackButton(_ sender: UIButton) {
-        self.dismiss(animated: true, completion: nil)
+        //self.dismiss(animated: true, completion: nil)
     }
     
     // createボタンが押されたときの処理処理

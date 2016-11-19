@@ -12,9 +12,11 @@ class memo1ViewController: UIViewController {
     
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var questionNumLabel: UILabel!
+    @IBOutlet weak var secondPeople: UILabel!
     @IBOutlet weak var yesNum: UILabel!
     @IBOutlet weak var answerLabel: UILabel!
     
+    @IBOutlet weak var Xgame: UILabel!
     // 表示中の問題番号を格納するための変数
     var currentQuestionNum: Int = 0
     // 正解数を格納するための変数
