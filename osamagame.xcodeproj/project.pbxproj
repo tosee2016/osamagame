@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A53299101DE049D1000F910D /* oosamagame.png in Resources */ = {isa = PBXBuildFile; fileRef = A532990E1DE049D1000F910D /* oosamagame.png */; };
+		A53299111DE049D1000F910D /* Start.png in Resources */ = {isa = PBXBuildFile; fileRef = A532990F1DE049D1000F910D /* Start.png */; };
 		A592F0741DDFDF0B0087AC01 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A592F0731DDFDF0B0087AC01 /* AppDelegate.swift */; };
 		A592F0761DDFDF0B0087AC01 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A592F0751DDFDF0B0087AC01 /* ViewController.swift */; };
 		A592F0791DDFDF0B0087AC01 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A592F0771DDFDF0B0087AC01 /* Main.storyboard */; };
@@ -28,6 +30,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A532990E1DE049D1000F910D /* oosamagame.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = oosamagame.png; sourceTree = "<group>"; };
+		A532990F1DE049D1000F910D /* Start.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Start.png; sourceTree = "<group>"; };
 		A592F0701DDFDF0B0087AC01 /* osamagame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = osamagame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A592F0731DDFDF0B0087AC01 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A592F0751DDFDF0B0087AC01 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -81,6 +85,8 @@
 		A592F0721DDFDF0B0087AC01 /* osamagame */ = {
 			isa = PBXGroup;
 			children = (
+				A532990E1DE049D1000F910D /* oosamagame.png */,
+				A532990F1DE049D1000F910D /* Start.png */,
 				A592F0731DDFDF0B0087AC01 /* AppDelegate.swift */,
 				A592F0751DDFDF0B0087AC01 /* ViewController.swift */,
 				A592F0771DDFDF0B0087AC01 /* Main.storyboard */,
@@ -189,6 +195,8 @@
 				A592F07E1DDFDF0B0087AC01 /* LaunchScreen.storyboard in Resources */,
 				A592F07B1DDFDF0B0087AC01 /* Assets.xcassets in Resources */,
 				A592F0791DDFDF0B0087AC01 /* Main.storyboard in Resources */,
+				A53299101DE049D1000F910D /* oosamagame.png in Resources */,
+				A53299111DE049D1000F910D /* Start.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
