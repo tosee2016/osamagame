@@ -1,97 +1,106 @@
 import UIKit
 import AVFoundation
+import Social //FaceBookを使用に必要
 
 @available(iOS 10.0, *)
-class cameraViewController: UIViewController {
+
+
+class cameraViewController: UIViewController, AVCapturePhotoCaptureDelegate {
     
+   // フェイスブック用
+    var myComposeView : SLComposeViewController!
+    // カメラの映像をここに表示
+ 
+//    @IBOutlet weak var cameraView: UIView!
     
     @IBOutlet weak var cameraView: UIView!
-
+    
+    var captureSesssion: AVCaptureSession!
     var stillImageOutput: AVCapturePhotoOutput?
     var previewLayer: AVCaptureVideoPreviewLayer?
-    //カメラセッション
-    var captureSession: AVCaptureSession!
-    //デバイス
-    var cameraDevices: AVCaptureDevice!
-    //画像のアウトプット
-    var imageOutput: AVCaptureStillImageOutput!
     
     // ボタンを押した時呼ばれる
-    @IBAction func takeIt(_ sender: AnyObject) {
+    @IBAction func takeIt(_ sender: Any) {
         // フラッシュとかカメラの細かな設定
         let settingsForMonitoring = AVCapturePhotoSettings()
         settingsForMonitoring.flashMode = .auto
         settingsForMonitoring.isAutoStillImageStabilizationEnabled = true
         settingsForMonitoring.isHighResolutionPhotoEnabled = false
         // シャッターを切る
-        stillImageOutput?.capturePhoto(with: settingsForMonitoring, delegate: self as! AVCapturePhotoCaptureDelegate)
+        stillImageOutput?.capturePhoto(with: settingsForMonitoring, delegate: self)
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        //セッションの作成
-        captureSession = AVCaptureSession()
+    
+    override func viewWillAppear(_ animated: Bool) {
         
-        //デバイス一覧の取得
-        let devices = AVCaptureDevice.devices()
+        captureSesssion = AVCaptureSession()
+        stillImageOutput = AVCapturePhotoOutput()
         
-        //バックカメラをcameraDevicesに格納
-        for device in devices! {
-            if (device as AnyObject).position == AVCaptureDevicePosition.back {
-                cameraDevices = device as! AVCaptureDevice
+        captureSesssion.sessionPreset = AVCaptureSessionPreset1920x1080 // 解像度の設定
+        
+        let device = AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeVideo)
+        
+        do {
+            let input = try AVCaptureDeviceInput(device: device)
+            
+            // 入力
+            if (captureSesssion.canAddInput(input)) {
+                captureSesssion.addInput(input)
+                
+                // 出力
+                if (captureSesssion.canAddOutput(stillImageOutput)) {
+                    captureSesssion.addOutput(stillImageOutput)
+                    captureSesssion.startRunning() // カメラ起動
+                    
+                    previewLayer = AVCaptureVideoPreviewLayer(session: captureSesssion)
+                    previewLayer?.videoGravity = AVLayerVideoGravityResizeAspect // アスペクトフィット
+                    previewLayer?.connection.videoOrientation = AVCaptureVideoOrientation.portrait // カメラの向き
+                    
+                    cameraView.layer.addSublayer(previewLayer!)
+                    
+                    // ビューのサイズの調整
+                    previewLayer?.position = CGPoint(x: self.cameraView.frame.width / 2, y: self.cameraView.frame.height / 2)
+                    previewLayer?.bounds = cameraView.frame
+                }
             }
         }
-        
-        //バックカメラからVideoInputを取得
-        let videoInput: AVCaptureInput!
-        do {
-            videoInput = try AVCaptureDeviceInput.init(device: cameraDevices)
-        } catch {
-            videoInput = nil
-        }
-        
-        //セッションに追加
-        captureSession.addInput(videoInput)
-        
-        //出力先を生成
-        imageOutput = AVCaptureStillImageOutput()
-        
-        //セッションに追加
-        captureSession.addOutput(imageOutput)
-        
-        //画像を表示するレイヤーを生成
-        let captureVideoLayer: AVCaptureVideoPreviewLayer = AVCaptureVideoPreviewLayer.init(session: captureSession)
-        captureVideoLayer.frame = self.view.bounds
-        captureVideoLayer.videoGravity = AVLayerVideoGravityResizeAspectFill
-        
-        //Viewに追加
-        self.view.layer.addSublayer(captureVideoLayer)
-        
-        //セッション開始
-        captureSession.startRunning()
-        
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    @IBAction func cameraStart(sender: AnyObject) {
-        //ビデオ出力に接続
-        let captureVideoConnection = imageOutput.connection(withMediaType: AVMediaTypeVideo)
-        
-        //接続から画像を取得
-        self.imageOutput.captureStillImageAsynchronously(from: captureVideoConnection) { (imageDataBuffer, error) -> Void in
-            //取得したImageのDataBufferをJPEGを変換
-            let capturedImageData: NSData = AVCaptureStillImageOutput.jpegStillImageNSDataRepresentation(imageDataBuffer) as NSData
-            //JPEGからUIImageを作成
-            let Image: UIImage = UIImage(data: capturedImageData as Data)!
-            //アルバムに追加
-            UIImageWriteToSavedPhotosAlbum(Image, self, nil, nil)
+        catch {
+            print(error)
         }
     }
     
+    // デリゲート。カメラで撮影が完了した後呼ばれる。JPEG形式でフォトライブラリに保存。
+    func capture(_ captureOutput: AVCapturePhotoOutput, didFinishProcessingPhotoSampleBuffer photoSampleBuffer: CMSampleBuffer?, previewPhotoSampleBuffer: CMSampleBuffer?, resolvedSettings: AVCaptureResolvedPhotoSettings, bracketSettings: AVCaptureBracketedStillImageSettings?, error: Error?) {
+        
+        if let photoSampleBuffer = photoSampleBuffer {
+            // JPEG形式で画像データを取得
+            let photoData = AVCapturePhotoOutput.jpegPhotoDataRepresentation(forJPEGSampleBuffer: photoSampleBuffer, previewPhotoSampleBuffer: previewPhotoSampleBuffer)
+            let image = UIImage(data: photoData!)
+            
+            // フォトライブラリに保存
+            UIImageWriteToSavedPhotosAlbum(image!, nil, nil, nil)
+        }
+   
+    }
     
+    @IBAction func facebookButton(_ sender: UIButton) {
+        
+        
+        //facebook連携
+        // postToTwitterと同様.
+        // ServiceTypeをFacebookに指定.
+        myComposeView = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
+        
+        // 投稿するテキストを指定.
+        myComposeView.setInitialText("Facebook Test")
+        
+        // 投稿する画像を指定.
+        myComposeView.add(UIImage(named: "sample1.jpg"))
+        
+        // myComposeViewの画面遷移.
+        self.present(myComposeView, animated: true, completion: nil)
+        
+        
+        
+    }
 }
