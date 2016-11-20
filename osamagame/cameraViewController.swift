@@ -11,7 +11,7 @@ class cameraViewController: UIViewController, AVCapturePhotoCaptureDelegate {
     var myComposeView : SLComposeViewController!
     // カメラの映像をここに表示
  
-//    @IBOutlet weak var cameraView: UIView!
+    @IBOutlet weak var gazou: UIImageView!
     
     @IBOutlet weak var cameraView: UIView!
     
@@ -77,11 +77,23 @@ class cameraViewController: UIViewController, AVCapturePhotoCaptureDelegate {
             let photoData = AVCapturePhotoOutput.jpegPhotoDataRepresentation(forJPEGSampleBuffer: photoSampleBuffer, previewPhotoSampleBuffer: previewPhotoSampleBuffer)
             let image = UIImage(data: photoData!)
             
+            
+            
             // フォトライブラリに保存
             UIImageWriteToSavedPhotosAlbum(image!, nil, nil, nil)
+            
+            // UIImageViewのインスタンスをビューに追加
+            let img = UIImage(data: photoData!)
+            gazou.image = img
+            
         }
+        
+        
+        
    
     }
+    
+    
     
     @IBAction func facebookButton(_ sender: UIButton) {
         
@@ -95,7 +107,7 @@ class cameraViewController: UIViewController, AVCapturePhotoCaptureDelegate {
         myComposeView.setInitialText("Facebook Test")
         
         // 投稿する画像を指定.
-        myComposeView.add(UIImage(named: "sample1.jpg"))
+        myComposeView.add(gazou.image)
         
         // myComposeViewの画面遷移.
         self.present(myComposeView, animated: true, completion: nil)
