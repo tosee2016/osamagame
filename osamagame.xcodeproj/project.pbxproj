@@ -7,8 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A5230D401DE1776A00865749 /* Facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = A5230D3B1DE1776A00865749 /* Facebook.png */; };
+		A5230D411DE1776A00865749 /* Start.png in Resources */ = {isa = PBXBuildFile; fileRef = A5230D3C1DE1776A00865749 /* Start.png */; };
+		A5230D421DE1776A00865749 /* syatta.png in Resources */ = {isa = PBXBuildFile; fileRef = A5230D3D1DE1776A00865749 /* syatta.png */; };
+		A5230D431DE1776A00865749 /* TOP.png in Resources */ = {isa = PBXBuildFile; fileRef = A5230D3E1DE1776A00865749 /* TOP.png */; };
+		A5230D441DE1776A00865749 /* 戻る.png in Resources */ = {isa = PBXBuildFile; fileRef = A5230D3F1DE1776A00865749 /* 戻る.png */; };
+		A5230D481DE180D200865749 /* IconTOP.png in Resources */ = {isa = PBXBuildFile; fileRef = A5230D471DE180D200865749 /* IconTOP.png */; };
+		A5230D4E1DE185D100865749 /* 120.png in Resources */ = {isa = PBXBuildFile; fileRef = A5230D4D1DE185D100865749 /* 120.png */; };
 		A53299101DE049D1000F910D /* oosamagame.png in Resources */ = {isa = PBXBuildFile; fileRef = A532990E1DE049D1000F910D /* oosamagame.png */; };
-		A53299111DE049D1000F910D /* Start.png in Resources */ = {isa = PBXBuildFile; fileRef = A532990F1DE049D1000F910D /* Start.png */; };
+		A53299111DE049D1000F910D /* あ.png in Resources */ = {isa = PBXBuildFile; fileRef = A532990F1DE049D1000F910D /* あ.png */; };
 		A53299141DE08D7A000F910D /* oosama.png in Resources */ = {isa = PBXBuildFile; fileRef = A53299121DE08D7A000F910D /* oosama.png */; };
 		A53299151DE08D7A000F910D /* Start1.png in Resources */ = {isa = PBXBuildFile; fileRef = A53299131DE08D7A000F910D /* Start1.png */; };
 		A53299171DE11CD5000F910D /* cameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53299161DE11CD5000F910D /* cameraViewController.swift */; };
@@ -33,8 +40,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A5230D3B1DE1776A00865749 /* Facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Facebook.png; sourceTree = "<group>"; };
+		A5230D3C1DE1776A00865749 /* Start.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Start.png; sourceTree = "<group>"; };
+		A5230D3D1DE1776A00865749 /* syatta.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = syatta.png; sourceTree = "<group>"; };
+		A5230D3E1DE1776A00865749 /* TOP.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TOP.png; sourceTree = "<group>"; };
+		A5230D3F1DE1776A00865749 /* 戻る.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "戻る.png"; sourceTree = "<group>"; };
+		A5230D471DE180D200865749 /* IconTOP.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IconTOP.png; sourceTree = "<group>"; };
+		A5230D4D1DE185D100865749 /* 120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 120.png; sourceTree = "<group>"; };
 		A532990E1DE049D1000F910D /* oosamagame.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = oosamagame.png; sourceTree = "<group>"; };
-		A532990F1DE049D1000F910D /* Start.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Start.png; sourceTree = "<group>"; };
+		A532990F1DE049D1000F910D /* あ.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "あ.png"; sourceTree = "<group>"; };
 		A53299121DE08D7A000F910D /* oosama.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = oosama.png; sourceTree = "<group>"; };
 		A53299131DE08D7A000F910D /* Start1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Start1.png; sourceTree = "<group>"; };
 		A53299161DE11CD5000F910D /* cameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cameraViewController.swift; sourceTree = "<group>"; };
@@ -92,8 +106,15 @@
 			isa = PBXGroup;
 			children = (
 				A532990E1DE049D1000F910D /* oosamagame.png */,
-				A532990F1DE049D1000F910D /* Start.png */,
+				A532990F1DE049D1000F910D /* あ.png */,
 				A53299121DE08D7A000F910D /* oosama.png */,
+				A5230D3B1DE1776A00865749 /* Facebook.png */,
+				A5230D4D1DE185D100865749 /* 120.png */,
+				A5230D471DE180D200865749 /* IconTOP.png */,
+				A5230D3C1DE1776A00865749 /* Start.png */,
+				A5230D3D1DE1776A00865749 /* syatta.png */,
+				A5230D3E1DE1776A00865749 /* TOP.png */,
+				A5230D3F1DE1776A00865749 /* 戻る.png */,
 				A53299131DE08D7A000F910D /* Start1.png */,
 				A592F0731DDFDF0B0087AC01 /* AppDelegate.swift */,
 				A592F0751DDFDF0B0087AC01 /* ViewController.swift */,
@@ -202,12 +223,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				A592F07E1DDFDF0B0087AC01 /* LaunchScreen.storyboard in Resources */,
+				A5230D401DE1776A00865749 /* Facebook.png in Resources */,
 				A592F07B1DDFDF0B0087AC01 /* Assets.xcassets in Resources */,
 				A592F0791DDFDF0B0087AC01 /* Main.storyboard in Resources */,
 				A53299141DE08D7A000F910D /* oosama.png in Resources */,
 				A53299101DE049D1000F910D /* oosamagame.png in Resources */,
 				A53299151DE08D7A000F910D /* Start1.png in Resources */,
-				A53299111DE049D1000F910D /* Start.png in Resources */,
+				A5230D441DE1776A00865749 /* 戻る.png in Resources */,
+				A5230D421DE1776A00865749 /* syatta.png in Resources */,
+				A5230D481DE180D200865749 /* IconTOP.png in Resources */,
+				A53299111DE049D1000F910D /* あ.png in Resources */,
+				A5230D4E1DE185D100865749 /* 120.png in Resources */,
+				A5230D431DE1776A00865749 /* TOP.png in Resources */,
+				A5230D411DE1776A00865749 /* Start.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

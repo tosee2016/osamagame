@@ -8,48 +8,17 @@
 
 import UIKit
 
+
 class memoViewController: UIViewController {
-    
+
+    //人数カウント
     var iCount: Int = 1
     
     @IBOutlet weak var nameInputBox: UITextField!
     
     @IBOutlet weak var nameDescriptionLabel: UILabel!
     
-    @IBAction func tappedStartButton(_ sender: UIButton) {
-    }
-    
-    // createボタンが押されたときの処理処理
-    @IBAction func tappedCreateButton(_ sender: Any) {
-        
-        // テキストボックスに入力された問題文をnameText定数に格納
-        let nameText:String = nameInputBox.text!
-        
-        // iphone端末内にデータを保存するために使用するuser defaultsをオブジェクト化(使えるようにする)
-        let ud = UserDefaults.standard
-        
-        // これまで格納されていた問題をnames配列に格納し、
-        var names: [[String: Any]] = ud.object(forKey: "names") as! [[String : Any]]
-        
-        // 今、ユーザーに入力してもらった問題文をnames配列に追加する
-        names.append( [
-            "name": nameText,
-            "answer": true
-            ])
-        
-        // 最後に、新たに問題が追加されたnames配列をuser defaultsを使ってiphone端末内に保存する
-        ud.setValue(names, forKey: "names")
-        
-        // 保存完了のalert
-        showAlert(message: "保存が完了しました!")
-        
-        iCount = iCount + 1
-        
-        nameDescriptionLabel.text = String(iCount) + "人目の名前を入力してください！！"
-        
-        nameInputBox.text = ""
-        
-    }
+    @IBAction func tappedStartButton(_ sender: UIButton) {}
     
     override func viewDidLoad() {
         
@@ -61,12 +30,54 @@ class memoViewController: UIViewController {
         // 空のarrayをset(for エラー回避)
         ud.setValue([], forKey: "names")
         
-        super.viewDidLoad()
-        
         nameDescriptionLabel.text = String(iCount) + "人目の名前を入力してください！！"
+        
+        super.viewDidLoad()
         
     }
     
+    // createボタンが押されたときの処理処理
+    @IBAction func tappedCreateButton(_ sender: Any) {
+        
+        //名前が未入力の時はアラート
+        if nameInputBox.text == "" {
+            
+            // 名前未入力のalert
+            showAlert(message: "名前を入力してください")
+            
+        }else{
+            
+            //画面の名前を変数に
+            let nameText:String = nameInputBox.text!
+            
+            // 保存用
+            let ud = UserDefaults.standard
+            //名前と性別を入れる。性別は後で・・・
+            var names: [[String: Any]] = ud.object(forKey: "names") as! [[String : Any]]
+            
+            //追加
+            names.append( [
+                "name": nameText,
+                "seibetu": true
+                ])
+            
+            // 保存する
+            ud.setValue(names, forKey: "names")
+            
+            // 保存完了のalert
+            showAlert(message: "保存が完了しました!")
+            
+            //人数をカウント
+            iCount = iCount + 1
+            
+            //画面に説明文をセット。
+            nameDescriptionLabel.text = String(iCount) + "人目の名前を入力してください！！"
+            
+            //名前入力をクリア
+            nameInputBox.text = ""
+        }
+        
+    }
     
     // アラートを表示させるための関数(引数として表示させたいmessageをString型で受け取る)
     func showAlert(message: String) {
@@ -80,4 +91,6 @@ class memoViewController: UIViewController {
         // 作成したアラートを表示
         present(alert, animated: true, completion: nil)
     }
-}
+    
+    
+ }
